@@ -4,7 +4,15 @@
 </h1>
 
 
+<% if user_signed_in? %>
+	do something
+<% else %>
 
-<p><%= link_to 'Sign up', '#', class: "btn btn-default" %> 
-	<%= link_to 'Sign-in', '#', class: "btn btn-primary btn-lg" %></p>
+<p>
+	<%= link_to 'Sign up', new_user_registration_path, class: "btn btn-default" %> 
+	<%= link_to 'Sign-in', new_user_session_path, class: "btn btn-primary btn-lg" %>
+</p>
+
+<% end %>
+
 </div>
